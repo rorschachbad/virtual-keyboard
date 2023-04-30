@@ -50,6 +50,9 @@ body {
     cursor: pointer;
     transition: 0.4s;
 }
+.key img {
+    width: 100%;
+}
 .key:hover {
     background-color: rgb(88, 193, 197);
 }
