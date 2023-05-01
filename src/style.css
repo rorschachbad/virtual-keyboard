@@ -50,6 +50,9 @@ body {
     cursor: pointer;
     transition: 0.4s;
 }
+.arrow {
+    color: black;
+}
 .key img {
     width: 100%;
 }
