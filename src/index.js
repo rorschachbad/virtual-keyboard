@@ -5,6 +5,8 @@ const container = document.querySelector('.container');
 
 const arrKeys = Array.from(keys);
 
+alert('Клавиатура делалась под Windows_OC');
+
 const defaultKeyboard = ['`', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '-', '=', 
 'Backspace', 'Tab', 'q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', '[', ']', 
 '\\', 'del', 'CapsLock', 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';', "'", 
