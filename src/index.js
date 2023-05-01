@@ -30,6 +30,17 @@ const rusKeyboard = ['ё', '1', '2', '3', '4', '5', '6', '7',
 let isCapslockActive = false;
 let pressShiftActive = false;
 
+function mouseClick(e) {
+        if (e.target.innerText !== 'Backspace' 
+        && e.target.innerText !== 'Tab' && e.target.innerText !== 'CapsLock'
+        && e.target.innerText !== 'Enter' && e.target.innerText !== 'Shift'
+        && e.target.innerText !== 'Alt' && e.target.innerText !== 'Ctrl'
+        && e.target.innerText !== 'Win' && e.target.innerText !== 'del') {
+                inputKeyboard.value += e.target.innerText;
+        } 
+}
+
+
 function isKeyDown(e) {
     Array.from(keys).forEach(key => {
         if (key.classList.contains(e.keyCode) && !key.classList.contains('active')  
@@ -64,6 +75,8 @@ function inputTeaxtarea(e) {
 }
 
 function BackSpace(e) {
+document.addEventListener('click', mouseClick);
+
     if (e.keyCode === 8) {
         inputKeyboard.value = inputKeyboard.value.substring(0, inputKeyboard.value.length - 1);
     }
@@ -189,6 +202,8 @@ document.addEventListener('keydown', pressShiftDown)
 
 document.addEventListener('keyup', pressShiftUp)
 document.addEventListener('keyup', isKeyUp);
+document.addEventListener('click', mouseClick);
+
 
 
 
